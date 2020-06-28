@@ -1,5 +1,11 @@
-def run():
-    return True
+from fastapi import FastAPI
 
-if __name__ == "__main__":
-    run()
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+# if __name__ == "__main__":
+    
