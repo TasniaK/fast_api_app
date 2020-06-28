@@ -1,0 +1,11 @@
+version: '3'
+services:
+  fast-api-app:
+    restart: always
+    build: .
+    volumes:
+      - .:/src
+    ports:
+      - "5000:5000"
+    expose:
+      - "5000"
